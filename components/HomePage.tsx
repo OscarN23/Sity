@@ -121,7 +121,7 @@ export function HomePage({ user, navigation }: HomePageProps) {
               <Text style={styles.sectionTitle}>Hop-In Rides</Text>
               <Text style={styles.sectionSubtitle}>Join rides leaving soon</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation?.navigate('Find Rides')}>
               <Text style={styles.seeAllLink}>See All</Text>
             </TouchableOpacity>
           </View>
