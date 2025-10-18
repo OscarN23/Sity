@@ -1,8 +1,11 @@
 import { createClient } from '@supabase/supabase-js'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { projectId, publicAnonKey } from './info'
+//import { projectId, publicAnonKey } from './info'
 
 // Create a single supabase client for interacting with your database
+const projectId = "ducdjqwtyuojzilterrz"
+const publicAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1Y2RqcXd0eXVvanppbHRlcnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA3MTAwNzAsImV4cCI6MjA3NjI4NjA3MH0.DTSxaOi_wemK4IfuXbz_j55YwF36buwowwDnAbAxGYs"
+
 export const supabase = createClient(
   `https://${projectId}.supabase.co`,
   publicAnonKey,
@@ -26,7 +29,7 @@ let MOCK_MODE = true
 
 // Function to check if we should use mock mode
 const shouldUseMockMode = () => {
-  return true
+  return false
 }
 
 export const mockUser = {
